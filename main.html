@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>UPDATERS — Hero</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#AEE1F6;      /* cor de fundo da seção (pode trocar p/ #00AEEF) */
+    --fg:#ffffff;      /* cor do texto frontal */
+    --extrude:#007EA7; /* cor da “profundidade” do texto */
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    background:var(--bg);
+    font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  .hero{
+    position:relative;
+    min-height:100vh;
+    padding:6vh 6vw 28vh;  /* espaço inferior p/ a foto da equipe */
+    overflow:hidden;
+  }
+  .title{
+    margin:0;
+    font-weight:900;
+    letter-spacing:-0.02em;
+    line-height:0.88;
+    color:var(--fg);
+    font-size:clamp(44px, 14vw, 220px);
+    /* 3D por extrusão com text-shadow empilhada */
+    text-shadow:
+      0 1px 0 var(--extrude),
+      0 2px 0 var(--extrude),
+      0 3px 0 var(--extrude),
+      0 4px 0 var(--extrude),
+      0 5px 0 var(--extrude),
+      0 10px 18px rgba(0,0,0,.18);
+  }
+  /* “We” menor em sua própria linha p/ ficar mais elegante */
+  .we{
+    display:block;
+    font-size:0.52em;      /* deixa o “We” um pouco menor */
+    line-height:0.86;
+    letter-spacing:0.01em;
+    margin-bottom:0.04em;  /* coladinho no verbo */
+  }
+  .team{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    display:flex; justify-content:center;
+    pointer-events:none;
+  }
+  .team img{
+    width:min(1200px, 95vw);
+    height:auto;
+    object-fit:contain;
+    filter: drop-shadow(0 24px 32px rgba(0,0,0,.18));
+  }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <h1 class="title">
+      <span class="we">We</span>Imagine.<br>
+      <span class="we">We</span>Build.<br>
+      <span class="we">We</span>Update.
+    </h1>
+
+    <div class="team">
+      <!-- sua PNG com fundo transparente vinda do Google Drive -->
+      <img
+        src="https://drive.google.com/uc?export=view&id=17JbVAfAPBbOCTvDjgZlvzbeou2RXqKAn"
+        alt="UPDATERS Team">
+    </div>
+  </section>
+</body>
+</html>
